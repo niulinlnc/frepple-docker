@@ -11,11 +11,11 @@ WORKDIR /resources
 RUN dpkg -i frepple_*.deb
 RUN apt-get -f -y -q install
 
-RUN tar -zxvf frepple_3.0.tar.gz
+RUN tar -zxvf frepple_4.1.orig.tar.gz
 WORKDIR /resources/django-frepple_3.0
 RUN python3 setup.py install
 RUN pip3 install djangorestframework
 
-ADD settings.py /etc/frepple/djangosettings.py
+#ADD settings.py /etc/frepple/djangosettings.py
 ADD start.sh /usr/bin/startfrepple
 CMD ["startfrepple"]
