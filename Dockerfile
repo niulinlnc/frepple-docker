@@ -1,5 +1,6 @@
 FROM debian:latest
 RUN apt-get -y -q update
+RUN apt-get -y -q full-upgrade
 
 RUN apt-get -y install python3-pip libpython3.4
 RUN apt-get -y install libxerces-c3.1 apache2 libapache2-mod-wsgi-py3 python3-psycopg2
