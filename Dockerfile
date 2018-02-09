@@ -4,7 +4,7 @@ RUN apt-get -y -q full-upgrade
 
 RUN apt-get -y install python3-pip libpython3.4
 RUN apt-get -y install libxerces-c3.1 apache2 libapache2-mod-wsgi-py3 python3-psycopg2
-RUN apt-get -y install vim wget
+RUN apt-get -y install vim wget mc nano
 RUN pip3 install openpyxl setuptools
 
 ADD resources/ /resources 
