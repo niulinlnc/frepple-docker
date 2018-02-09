@@ -6,7 +6,6 @@ RUN apt-get -y install python3-pip libpython3.4
 RUN apt-get -y install vim wget mc nano
 RUN apt-get -y install libxerces-c3.1 apache2 libapache2-mod-wsgi-py3 python3-psycopg2
 RUN pip3 install openpyxl setuptools
-RUN pip3 install -r requirements.txt
 
 ADD resources/ /resources 
 WORKDIR /resources
@@ -18,6 +17,7 @@ WORKDIR /resources/django-frepple_3.0
 RUN pip3 install djangorestframework
 
 WORKDIR /resources/frepple-4.3
+RUN pip3 install -r requirements.txt
 RUN python3.5  setup.py install
 EXPOSE 8000 5432
 
