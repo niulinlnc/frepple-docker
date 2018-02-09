@@ -1,3 +1,3 @@
 docker build --no-cache --rm --tag incinform/frepple-docker:4.3 .
 
-docker run -d -p 8000:8000 --restart on-failure:5 --name frepple43 ivcinform/frepple-docker:4.3
+docker run -d -p 8000:8000 --restart on-failure:5 --name frepple43 -t incinform/frepple-docker:4.3 bash
