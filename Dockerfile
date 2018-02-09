@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM ubuntu:latest
 RUN apt-get -y -q update
 
 RUN apt-get -y install python3-pip libpython3.4
