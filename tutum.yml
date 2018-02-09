@@ -1,5 +1,5 @@
 frepple:
-    image: asbjornenge/frepple-docker
+    image: ivc-inform/frepple-docker
     links:
         - "frepple-db:frepple-db"
     ports:
@@ -7,6 +7,6 @@ frepple:
     roles:
         - global
 frepple-db:
-    image: postgres:9.1.19
+    image: postgres:10.1
     volumes:
         - /var/lib/postgresql/data:/data/postgres
