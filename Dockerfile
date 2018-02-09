@@ -18,7 +18,7 @@ RUN pip3 install djangorestframework
 
 WORKDIR /resources/frepple-4.3
 RUN python3  setup.py install
-EXPOSE 8000
+EXPOSE 8000 5432
 
 ADD start.sh /usr/bin/startfrepple
 CMD ["startfrepple"]
