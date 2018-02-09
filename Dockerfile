@@ -14,9 +14,8 @@ RUN apt-get -f -y -q install
 
 RUN tar -zxvf frepple_4.3.orig.tar.gz
 WORKDIR /resources/django-frepple_3.0
-RUN python3 setup.py install
 RUN pip3 install djangorestframework
+RUN python3 ./setup.py install
 
-#ADD settings.py /etc/frepple/djangosettings.py
-ADD start.sh /usr/bin/startfrepple
-CMD ["startfrepple"]
+#ADD start.sh /usr/bin/startfrepple
+#CMD ["startfrepple"]
